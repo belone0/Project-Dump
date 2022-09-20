@@ -54,56 +54,47 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void IMC(double a, double p) {
     setState(() {
-
-      imc = p / (a*a);
+      imc = p / (a * a);
     });
   }
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
-
         title: Text(widget.title),
       ),
       body: Center(
-
         child: Column(
-
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-
-             TextField(
-              onChanged: (text){
+            TextField(
+              onChanged: (text) {
                 peso = double.parse(text);
-            },
+              },
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Peso',
               ),
             ),
-
-             TextField(
-               onChanged: (text){
-                 altura = double.parse(text);
-               },
+            TextField(
+              onChanged: (text) {
+                altura = double.parse(text);
+              },
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Altura',
               ),
             ),
-
             RaisedButton(
-                child: const Text('Calcular IMc'),
-                elevation: 4.0,
-              onPressed: (){
-                  IMC(altura,peso);
+              child: const Text('Calcular IMc'),
+              elevation: 4.0,
+              onPressed: () {
+                IMC(altura, peso);
               },
             ),
-
-              Text('IMC: '),
-              Text(imc.toString()),
+            Text('IMC: '),
+            Text(imc.toString()),
           ],
         ),
       ),
