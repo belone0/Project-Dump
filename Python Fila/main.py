@@ -7,4 +7,3 @@ fila1.enfileirar(4)
 fila1.enfileirar(9)
 
 print(fila1)
-
