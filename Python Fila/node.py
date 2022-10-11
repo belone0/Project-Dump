@@ -6,3 +6,6 @@ class Node:
 
     def setProximo(self,proximo):
         self.proximo = proximo
+
+    def __str__(self):
+        return str(self.numero)

@@ -12,20 +12,20 @@ class Fila:
             self.inicio = node
             self.fim = node
         else:
-            self.fim = node
+            self.fim.setProximo(node)
             self.fim = self.fim.proximo
 
     def esta_vazia(self):
         return(self.inicio == None)
 
     def __str__(self):
-
         aux = self.inicio
-
-        while aux.proximo != None:
-
+        output = '['
+        while aux != None:
+            output += f"{str(aux.numero)}, "
             aux = aux.proximo
-        return
+        output += ']'
+        return output
 
 
 
