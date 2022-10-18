@@ -4,6 +4,7 @@ class Pilha:
 
     def __init__(self):
         self.topo = None
+        self.count_items = 1
 
     def empilhar(self, numero):
         node = Node(numero)
@@ -30,3 +31,13 @@ class Pilha:
             aux = aux.proximo
         output += ']'
         return output
+
+    def count(self):
+        if self.esta_vazia():
+            return 0
+        else:
+            aux = self.topo
+            while aux.proximo != None:
+                aux = aux.proximo
+                self.count_items +=1
+        return self.count_items
