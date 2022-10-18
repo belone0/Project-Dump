@@ -16,6 +16,12 @@ class Fila:
             self.fim.setProximo(node)
             self.fim = self.fim.proximo
 
+    def desenfileirar(self):
+        if self.esta_vazia():
+            pass
+        else:
+            self.inicio = self.inicio.proximo
+
     def esta_vazia(self):
         return (self.inicio == None)
 
