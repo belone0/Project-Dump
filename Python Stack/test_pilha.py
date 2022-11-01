@@ -10,5 +10,6 @@ def test_numero_de_elementos_da_pilha():
     pilha.empilhar(2)
     pilha.empilhar(3)
     pilha.empilhar(4)
+    pilha.desempilhar()
 
-    assert pilha.count() == 4
+    assert pilha.count() == 3
